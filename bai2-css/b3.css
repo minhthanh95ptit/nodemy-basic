@@ -1,0 +1,13 @@
+ul,li{
+  list-style-type: none;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #33d633;
+  color: black;
+}
+
+ul,li:hover{
+  background-color: green;
+}
+
