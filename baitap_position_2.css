@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 30px;
+    background-color: coral;
+    position: fixed;
+}
+
+.menu{
+    width: 1200px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+li{
+    list-style-type: none;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: gray;
+    position: relative;
+}
+
+.sub-menu{
+    position: absolute;
+    display: none;
+}
+
+.menu li:hover{
+    background-color: antiquewhite;
+    color: black;
+    cursor: pointer;
+}
+
+.menu li:hover .sub-menu{
+    display: block;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
