@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+
+.container{
+    width: 300px;
+    height: 360px;
+    position: relative;
+}
+
+.shadow{
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+img{
+    width: 90%;
+    position: absolute;
+    top: 40px;
+    left: 25px;
+}
+
+.text{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+}
+
+.left{
+    background-color: red;
+    display: inline-block;
+}
+
+.right{
+    background-color: green;
+    display: inline-block;
+    position: absolute;
+    left: 240px;
+}
+
+.center-text{
+    position: absolute;
+    top: 280px;
+    text-align: center;
+}
+
+.gia{
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    top: 340px;
+}
+
+.goc{
+    text-decoration: line-through;
+    top: 320px;
+}

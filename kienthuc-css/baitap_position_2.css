@@ -20,6 +20,7 @@ html,body{
     width: 1200px;
     height: 30px;
     margin: 0 auto;
+    position: fixed;
 }
 
 li{
@@ -40,17 +41,25 @@ li{
 }
 
 .menu li:hover{
-    background-color: antiquewhite;
+    background-color: blanchedalmond;
     color: black;
     cursor: pointer;
 }
 
-.menu li:hover .sub-menu{
+.menu li:hover>.sub-menu{
     display: block;
 }
 
+.pl-100{
+    left: 100px;
+    top: 0px;
+}
 .clearfix::after{
     content: "";
     display: block;
     clear: both;
+}
+
+.padding-top{
+    padding-top: 30px;
 }

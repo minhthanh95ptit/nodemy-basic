@@ -1,13 +1,54 @@
-ul,li{
-  list-style-type: none;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  background-color: #33d633;
-  color: black;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-ul,li:hover{
-  background-color: green;
+.menu{
+  background-color: #aad862;
+  width: 250px;
+  
 }
+
+.menu li{
+  list-style-type: none;
+  border: 1px solid #78b43d;
+  line-height: 30px;
+}
+
+.menu li:hover{
+  background-color: #78b43d;
+  color: white;
+  position: relative;
+}
+
+.menu>li::before{
+  content: "\f054";
+  padding: 0 20px;
+  font-weight: 900;
+  color: white;
+  font-family: "Font Awesome 5 Free";
+}
+
+.sub-menu{
+  width: 250px;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  background-color: #78b43d;
+  color: black;
+  display: none;
+
+}
+
+.menu li:hover .sub-menu{
+
+  display: block;
+}
+
+.menu li .sub-menu li{
+  padding-left: 30px;
+  border-bottom: 1px solid white;
+}
+
 
