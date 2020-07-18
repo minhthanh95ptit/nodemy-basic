@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .logo{
+    width: 250px;
+    font-size: 35px;
+    color: #35ab35;
+    font-weight: bold;
+    margin: 10px 10px 30px 0;
+}
+
+.main .logo a{
+    text-decoration: none;
+    color: #1b9a1b;
+}
+
+.logo h5{
+    display: inline;
+    font-size: 30px;
+}
+
+.main img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.main .lien-ket{
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main .lien-ket ul{
+    list-style-type: none;
+}
+
+.main .lien-ket li{
+    margin-bottom: 10px;
+    font-size: 14px;
+
+}
+
+.main .lien-ket li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.main .lien-ket p{ 
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.main .lien-he{
+    width: 400px;
+    margin-top: 10px;
+}
+
+.main .lien-he p{ 
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    margin-bottom: 30px;    
+}
+
+.main .lien-he ul{
+    list-style-type: none;
+}
+
+.main .lien-he ul li{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.main .lien-he ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.footer{
+    height: 300px;
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0.5;
+}
+
+@media only screen and (min-width: 600px) {
+    .main{
+        display: flex;
+        flex-direction: row;
+    }
+
+}
