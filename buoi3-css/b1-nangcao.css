@@ -12,6 +12,7 @@ html,body{
 .list-product{
     box-shadow: 2px 2px 2px #AAA;
     position: relative;
+    cursor: pointer;
 }   
 
 
