@@ -1,10 +1,11 @@
-
 var value = "";
+var typing;
 function myFunction(event){
    value += String.fromCharCode(event.keyCode)
-   console.log(value);
+ 
    clearTimeout(typing);
-	var typing = setTimeout(function(){
-		alert('ban da go ' + value);
+	typing = setTimeout(function(){
+        console.log(value);
+		alert('Bạn đã gõ: ' + value);
 	} , 1000);
 }
