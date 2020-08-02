@@ -1,0 +1,85 @@
+Chuẩn bị
+Kịch bản thực hành git merge
+
+Dev1:  (luyện khởi tạo dự án)
+Tạo dự án trên gitlab, mời thành viên
+	
+	Tạo local GIT: Git init 
+	Liên kết remote : Git remote add origin linkGIT
+ 	Commit: git add .    git commit -m “”
+	Đẩy code lên remote lần đầu: git push -u origin tenBranch
+	Đẩy lần 2 về sau:  git push
+	
+Dev2:  ( luyện clone)
+	Clone dự án: git clone linkGit
+	Tạo branch: git checkout -b developer
+Tạo 1 file A.txt: thêm 5 dòng bất kỳ
+	Commit : git add .    git commit -m “”
+	Đẩy lên remote branch: git push -u  origin developer
+	
+
+
+
+Bài 1:  (Luyện pull code)
+Dev1 thực hiện pull code
+	Dev1 pull code branch developer  của Dev2 về
+Bài 2:  (Conflict)
+Cả 2 Dev sửa file A.txt vừa tạo
+	Dev1: Dòng 1 - 10 => commit 
+	Dev2: Dòng 5 - 15 => commit
+	=> sẽ bị conflict ở file A.txt
+	
+Dev1:  push trước lên remote
+Dev2: push sau => lỗi.
+	Git pull : lỗi conflict
+	Sửa conflict:
+		Hủy:  git merge --abort
+		Xác nhận sửa xong: git commit -m “fix conflict xong xuôi”
+		Git push
+Dev1: Git pull
+
+Bài 3:  ( luyện merge)
+	Dev1: Thêm file B.txt, push lên remote nhánh developer_dev1
+		Git checkout -b developer_dev1
+		Git add .    git commit -m “them file B”
+		Git push -u  origin developer_dev1
+Dev2: 	Thêm file C.txt push lên remote nhánh developer_dev2
+	Dev2: 
+	Tạo developer_dev1 dưới local: git checkout -b developer_dev1
+	Git pull ( git pull -u origin developer_dev1)
+Chuyển sang developer_dev2.
+	Git merge developer_dev1
+	Git push 
+
+	
+	Dev1: 
+	Tương tự dev2
+
+
+
+Nâng Cao
+Case 1: Lập trình viên A
+    commit 1 code đang chạy ổn định 
+    commit 2 code lỗi do không để ý
+    
+BT1:   Lập trình viên A muốn quay lại commit 1 và xóa commit 2 coi như chưa tồn tại  -- git reset
+BT2:   Muốn giữ cả commit 2 nhưng muốn code quay về commit 1 -- git revert
+
+Case 2: Quản lý tạo ra 3 nhóm(branch) từ master giao cho 3 bạn leader quản lý
+    branch nhom1 
+    branch nhom2 
+    branch nhom3 
+
+Mỗi quản lý có nhiệm vụ làm giới thiệu bản thân: các bạn phải thêm app.get('/', function(req, res){res.json('toi la ...')})
+Để tiết kiệm time Leader sẽ giao từng việc cho các bạn Dev Dưới cấp làm
+và sẽ như sau:
+    VD:  nhóm 1 gồm 3 bạn dev cấp dưới Sơn, Hiệp, Tiến
+    Từ nhom1: sẽ có 3 branch chia nhỏ (nhom1-son, nhom1-hiep, nhom1-tien)
+    
+    Mục tiêu:  nhom1 sẽ tổng hợp code của 3 branch trên khi xong
+    master tổng hợp code của 3 nhom1, nhom2, nhom3 khi xong
+
+Git reset --hard idcommit
+Git push -f
+Git revert HEAD (revert laij commit truoc commit hien tai)
+
